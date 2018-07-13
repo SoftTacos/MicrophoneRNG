@@ -2,7 +2,8 @@
 Made a random number generator using microphone input just to see if I could, works surprisingly well.
 
 ### SETUP ###
-I know this works within my linux environment, wasn't able to get it working on my Win7 PC.
+Written in Python 2.7
+I know this works within my linux environment, wasn't able to get it working on my Win7 PC. 
 
 Requires installation of pyaudio to work, you can either use pip to install libportaudio and then pyaudio, or follow the instructions below.
 
