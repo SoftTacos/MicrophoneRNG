@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import pyaudio #YOU HAVE TO INSTALL THIS
+import pyaudio
 import wave
 import numpy
 import sys, os
@@ -39,24 +39,16 @@ for i in range(0, SAMPLES):
     ### HASHING ###
     randomized_audio = 0
     for i in range(0,len(data)):
-        randomized_audio += data[i]# 3**(data[i])#simple way to 'numberize' the giant audio stream
+        randomized_audio += data[i]# 3**(data[i])#simple way to quantify the giant audio stream
     random_number = HUGE_PRIME * randomized_audio % RANGE
     
     results.append(random_number)
 print results
 
-frequencies = [0]*RANGE
-for res in results:
-    frequencies[int(res)]+=1
-total = 0
-for res in results:
-    total+=res
-average = total/SAMPLES
-total_deviation = 0
-for res in results:
-    total_deviation+= abs(res-average)
-std_dev = total_deviation/SAMPLES
+#frequencies = [0]*RANGE
+#for res in results:
+#    frequencies[int(res)]+=1
+#print frequencies
+print "AVERAGE: " + str(numpy.mean(results))
+print "Standard Dev: " + str(numpy.std(results, axis=0))
 
-print frequencies
-print average
-print std_dev
