@@ -7,9 +7,13 @@ I know this works within my linux environment, wasn't able to get it working on 
 Requires installation of pyaudio to work, you can either use pip to install libportaudio and then pyaudio, or follow the instructions below.
 
 1 sudo apt-get install git
+
 2 git clone http://people.csail.mit.edu/hubert/git/pyaudio.git
+
 3 sudo apt-get install libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev
+
 4 sudo apt-get python-dev
+
 5 sudo python pyaudio/setup.py install
 
 ### USE ###
